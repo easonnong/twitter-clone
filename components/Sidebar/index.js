@@ -57,7 +57,7 @@ export const Sidebar = () => {
             src="/images/user-icon.png"
             height="80px"
             width="80px"
-            className="rounded-full h-50 w-50 flex items-center justify-center"
+            className="rounded-full h-50 w-50 flex items-center justify-center cursor-pointer hover:brightness-95"
           ></Image>
           <div className="hidden xl:inline">
             <h4 className="font-bold">Eason Nong</h4>
