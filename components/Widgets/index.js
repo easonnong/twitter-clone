@@ -21,12 +21,19 @@ export const Widgets = (props) => {
       </div>
       {/* New */}
       <div>
-        <h4>What's happening</h4>
+        <h4 className="font-bold text-xl px-4 py-2">What's happening</h4>
         {props.newsResults.slice(0, articleNum).map((article) => (
-          <News></News>
+          <News key={article.title} article={article}></News>
         ))}
         {/* Show more button */}
-        <button onClick={() => setArticleNum(articleNum + 3)}>Show more</button>
+        <div className="pl-3">
+          <button
+            className="bg-blue-300 rounded-full pl-2 pr-2 pb-2 pt-2 hover:text-blue-400"
+            onClick={() => setArticleNum(articleNum + 3)}
+          >
+            Show more
+          </button>
+        </div>
       </div>
     </div>
   );
