@@ -44,7 +44,7 @@ export const Feed = () => {
 
       {/* Post */}
       <section>
-        <div className="bg-blue-100 min-h-[90px]">
+        <div>
           {posts.map((post) => (
             <Post key={post.id} post={post}></Post>
           ))}
