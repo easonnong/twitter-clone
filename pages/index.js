@@ -20,7 +20,10 @@ export default function Home(props) {
         <Feed></Feed>
 
         {/* Widgets */}
-        <Widgets newsResults={props.newsResults.articles}></Widgets>
+        <Widgets
+          newsResults={props.newsResults.articles}
+          randomUsersResults={props.randomUsersResults.results}
+        ></Widgets>
 
         {/* Modal */}
       </main>
@@ -28,16 +31,21 @@ export default function Home(props) {
   );
 }
 
-// https://saurav.tech/NewsAPI/top-headlines/category/business/in.json
-
 export async function getServerSideProps() {
+  // News results
   const newsResults = await fetch(
-    "https://saurav.tech/NewsAPI/top-headlines/category/business/in.json"
+    "https://saurav.tech/NewsAPI/top-headlines/category/business/us.json"
+  ).then((res) => res.json());
+
+  // Who to follow section
+  const randomUsersResults = await fetch(
+    "https://randomuser.me/api/?results=30&inc=name,login,picture"
   ).then((res) => res.json());
 
   return {
     props: {
       newsResults,
+      randomUsersResults,
     },
   };
 }
