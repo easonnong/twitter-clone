@@ -4,7 +4,7 @@ import { getProviders } from "next-auth/react";
 export default function signin(props) {
   return (
     <div>
-      <Signin props={props}></Signin>
+      <Signin providers={props.providers}></Signin>
     </div>
   );
 }
