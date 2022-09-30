@@ -1,0 +1,25 @@
+{
+  "name": "moralis-web3auto",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "ethers": "^5.7.1",
+    "moralis": "^2.6.0",
+    "next": "12.3.1",
+    "next-auth": "^4.12.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "wagmi": "^0.6.7"
+  },
+  "devDependencies": {
+    "eslint": "8.24.0",
+    "eslint-config-next": "12.3.1"
+  }
+}
